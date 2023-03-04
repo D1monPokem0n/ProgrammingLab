@@ -1,4 +1,4 @@
-package ru.ifmo.se.Ticket;
+package ru.ifmo.se.ticket;
 
 public class Coordinates {
     private Integer x;

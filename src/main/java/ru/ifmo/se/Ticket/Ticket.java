@@ -1,8 +1,8 @@
-package ru.ifmo.se.Ticket;
+package ru.ifmo.se.ticket;
 
 public class Ticket {
     private Long id;
-    private static Long nextId = new Long(1);
+    private static Long nextId = 1L;
 
     private String name;
     private Coordinates coordinates;
