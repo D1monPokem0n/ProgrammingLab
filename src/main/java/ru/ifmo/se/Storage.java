@@ -7,5 +7,4 @@ public class Storage {
     LinkedHashSet<Ticket> LHS;
     Ticket MinElement;
     public void sort(){}
-
 }
