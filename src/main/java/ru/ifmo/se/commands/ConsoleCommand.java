@@ -1,8 +1,8 @@
 package ru.ifmo.se.commands;
 
-public abstract class ConsoleCommand implements Command{
-    @Override
-    public void execute() {
-        System.out.println("This command is " + getClass().getName());
+public class ConsoleCommand extends CommandBlueprint {
+
+    public ConsoleCommand(String word) {
+        super(word);
     }
 }

@@ -16,7 +16,7 @@ public class Main {
             String command = commandAndArgument[0];
             String argument = commandAndArgument.length == 2 ? commandAndArgument[1] : null;
             controller.setConsoleArgument(argument);
-            controller.executeCommand(command);
+            controller.executeCommand(null,command);
         }
     }
 }

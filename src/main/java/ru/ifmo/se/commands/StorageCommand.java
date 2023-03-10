@@ -2,18 +2,14 @@ package ru.ifmo.se.commands;
 
 import ru.ifmo.se.Storage;
 
-public abstract class StorageCommand implements Command{
+public class StorageCommand extends CommandBlueprint {
     private final Storage storage;
-
-    @Override
-    public void execute() {
-        System.out.println("This Command is " + this.getClass().getName());
-    }
 
     public Storage getStorage() {
         return storage;
     }
-    public StorageCommand(Storage storage){
+    public StorageCommand(String word, Storage storage){
+        super(word);
         this.storage = storage;
     }
 }
