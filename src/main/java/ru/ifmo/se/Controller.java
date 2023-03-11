@@ -1,6 +1,8 @@
 package ru.ifmo.se;
 
 import ru.ifmo.se.commands.*;
+import ru.ifmo.se.commands.addcommands.AddCommand;
+import ru.ifmo.se.commands.addcommands.AddIfMinCommand;
 
 import java.util.HashMap;
 
