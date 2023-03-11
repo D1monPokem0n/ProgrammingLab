@@ -29,4 +29,16 @@ public class Storage {
         Collections.sort(sortedTicketArray);
         return sortedTicketArray;
     }
+
+    public void clear() {
+        LHS.clear();
+    }
+
+    public boolean remove_lower(Ticket ticket) {
+        return LHS.removeIf(t -> (t.compareTo(ticket)>0));
+    }
+
+    public boolean remove_by_id(Long id) {
+        return LHS.removeIf(t -> (t.getId().equals(id)));
+    }
 }
