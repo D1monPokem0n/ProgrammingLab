@@ -1,6 +1,6 @@
 package ru.ifmo.se.ticket;
 
-public class Event {
+public class Event implements Comparable<Event> {
     private int id;
     private static int nextId = 1;
     private String name;
@@ -14,4 +14,9 @@ public class Event {
         this.ticketCount = ticketCount;
         this.eventType = eventType;
     }
+
+    public int compareTo(Event other) {
+        return ticketCount - other.ticketCount;
+    }
+
 }

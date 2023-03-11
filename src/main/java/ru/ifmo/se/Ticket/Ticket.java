@@ -1,6 +1,6 @@
 package ru.ifmo.se.ticket;
 
-public class Ticket {
+public class Ticket implements Comparable<Ticket> {
     private Long id;
     private static Long nextId = 1L;
 
@@ -26,6 +26,21 @@ public class Ticket {
         this.comment = comment;
         this.type = type;
         this.event = event;
-        System.out.println(creationDate);
     }
+    public int compareTo(Ticket other) {
+        if (!creationDate.isEqual(other.creationDate)) {
+            return creationDate.compareTo(other.creationDate);
+        } else {
+            if (!type.equals(other.type)) {
+                return -type.ordinal()+other.type.ordinal();
+            } else {
+                if (event.compareTo(other.event) != 0) {
+                    return event.compareTo(other.event);
+                } else {
+                    return (int)(price*discount-other.price*other.discount);
+                }
+            }
+        }
+    }
+
 }
