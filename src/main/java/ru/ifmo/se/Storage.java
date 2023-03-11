@@ -1,7 +1,10 @@
 package ru.ifmo.se;
 import ru.ifmo.se.ticket.*;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedHashSet;
+import java.util.List;
 
 public class Storage {
     LinkedHashSet<Ticket> LHS;
@@ -19,5 +22,11 @@ public class Storage {
     }
     public boolean addElement(Ticket ticket){
         return LHS.add(ticket);
+    }
+
+    public List<Ticket> getSortedArray() {
+        List<Ticket> sortedTicketArray = new ArrayList<>(LHS);
+        Collections.sort(sortedTicketArray);
+        return sortedTicketArray;
     }
 }
